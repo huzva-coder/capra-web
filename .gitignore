@@ -1,0 +1,7 @@
+# interní podklady, na web nepatří
+docs/
+
+# smetí operačních systémů
+Thumbs.db
+desktop.ini
+.DS_Store

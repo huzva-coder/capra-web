@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outsourcing HR administrativy</title>
+<meta name="description" content="Outsourcing HR administrativy">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Outsourcing HR administrativy">
+<meta property="og:description" content="Konec dohadování s lidmi a zbytečných nákladů.">
+<meta property="og:image" content="https://huzva-coder.github.io/capra-web/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://huzva-coder.github.io/capra-web/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23D9A400'/%3E%3Cstop offset='.5' stop-color='%23FFCC00'/%3E%3Cstop offset='1' stop-color='%23FFE97A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='url(%23g)'/%3E%3Ctext x='32' y='35' text-anchor='middle' dominant-baseline='central' font-family='system-ui,Segoe UI,Arial,sans-serif' font-size='31' font-weight='700' fill='%230B3D91'%3EHR%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="head-link" href="#kontakt">
+      Chci se dozvědět více
+      <svg class="sipka" viewBox="0 0 20 12" aria-hidden="true">
+        <path d="M1 6h17M13.5 1.5 18.5 6l-5 4.5" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</header>
+
+<nav class="sectionbar" aria-label="Sekce stránky">
+  <div class="wrap">
+    <span class="phg">
+      <img class="phg-strom" src="assets/phg-strom.webp" width="194" height="220" alt="">
+      <img class="phg-text" src="assets/phg-text-claim.webp" width="729" height="200" alt="PH Growth">
+    </span>
+    <div class="sectionbar-odkazy">
+      <a href="#kalkulacka">Kolik utrácíte</a>
+      <a href="#sluzby">Naše služby</a>
+      <a href="#rizika">Na co si dát pozor</a>
+      <a href="#kontakt">Kontaktujte nás</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="copy">
+      <h1>Chcete se zbavit dohadování,<br>zbytečných nákladů a&nbsp;papírování?</h1>
+      <p class="sub">Outsourcing náborů, nástupů a personální administrativy za zlomek ceny HR specialisty.</p>
+      <a class="btn btn-primary" href="#kontakt">Ano, jsem připraven</a>
+    </div>
+    <div class="hero-people">
+      <figure class="fig fig-l" data-vizitka>
+        <img src="assets/osoba-a.webp" width="620" height="691" alt="Michal Hužva">
+        <button class="vizitka-btn" type="button" aria-expanded="false"
+                aria-controls="vizitka-1" aria-label="Zobrazit vizitku"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <figcaption class="vizitka" id="vizitka-1">
+          <p class="vizitka-jmeno">Mgr. Michal Hužva</p>
+          <p class="vizitka-role">Operations</p>
+          <p class="vizitka-popis">Psycholog a datový vědec</p>
+        </figcaption>
+      </figure>
+      <figure class="fig fig-r" data-vizitka>
+        <img src="assets/osoba-b.webp" width="620" height="691" alt="Patrik Hužva">
+        <button class="vizitka-btn" type="button" aria-expanded="false"
+                aria-controls="vizitka-2" aria-label="Zobrazit vizitku"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <figcaption class="vizitka" id="vizitka-2">
+          <p class="vizitka-jmeno">Mgr. Patrik Hužva, MBA</p>
+          <p class="vizitka-role">Strategie</p>
+          <p class="vizitka-popis">GŘ, Jednatel a MBA lektor</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="hero-foto">
+      <img src="assets/together-ab.webp" width="1443" height="1090" alt="" decoding="async">
+    </div>
+  </section>
+
+  <!-- ============ KALKULAČKA ============ -->
+  <section id="kalkulacka" class="calc-section" data-section="kalkulacka">
+    <div class="wrap">
+      <h2>Kolik utrácíte, když HR řeší vedení?</h2>
+      <p class="lede">Vaši klíčoví lidé jsou placeni za rozvoj byznysu. Pokud ale tráví čas personální administrativou, ztrácíte peníze na úkolech mimo jejich expertízu. Spočítejte si své reálné náklady a zjistěte, kolik s námi ušetříte.</p>
+
+      <div class="calc" data-calc>
+        <div class="calc-input">
+          <label for="pocet">Kolik vedoucích máte ve firmě?</label>
+
+          <div class="slider">
+            <output class="slider-bubble" for="pocet" data-out="pocet">1</output>
+            <input type="range" id="pocet" min="1" max="30" value="5" step="1">
+            <div class="slider-scale"><span>1</span><span>30</span></div>
+          </div>
+
+          <p class="calc-rozpad">
+            <strong class="num num-2" data-out="pocet">1</strong>
+            <span data-out="slovoLide">člověk</span> ve vedení:
+            1 ředitel a
+            <strong class="num num-2" data-out="manazeru">0</strong>
+            <span data-out="slovoManazer">manažerů či mistrů</span>
+          </p>
+        </div>
+
+        <div class="calc-output">
+          <p class="calc-label">Ročně vás to stojí</p>
+          <p class="calc-money"><span class="num num-money" data-out="kc">0</span>&nbsp;Kč</p>
+          <p class="calc-days">
+            <strong class="num num-4" data-out="dny">0</strong> člověkodnů ročně,
+            které nešly do byznysu.
+          </p>
+        </div>
+      </div>
+
+      <details class="calc-note">
+        <summary>Výpočet</summary>
+
+        <p class="param-uvod">Hodnoty si přepište podle své firmy, výsledek se přepočítá.</p>
+
+        <div class="param">
+          <div class="param-radek">
+            <span class="param-role">Ředitel</span>
+            <label>hrubá mzda
+              <input type="number" id="mzda-reditel" value="150000" min="0" step="1000" inputmode="numeric">
+              <span class="param-jed">Kč</span>
+            </label>
+            <label>čas na HR
+              <input type="number" id="podil-reditel" value="10" min="0" max="100" step="1" inputmode="numeric">
+              <span class="param-jed">%</span>
+            </label>
+          </div>
+          <div class="param-radek">
+            <span class="param-role">Manažer či mistr</span>
+            <label>hrubá mzda
+              <input type="number" id="mzda-manazer" value="80000" min="0" step="1000" inputmode="numeric">
+              <span class="param-jed">Kč</span>
+            </label>
+            <label>čas na HR
+              <input type="number" id="podil-manazer" value="20" min="0" max="100" step="1" inputmode="numeric">
+              <span class="param-jed">%</span>
+            </label>
+          </div>
+        </div>
+
+        <ul>
+          <li>K hrubé mzdě připočítávám odvody zaměstnavatele <strong>33,8 %</strong>
+              (24,8 % sociální + 9 % zdravotní pojištění, sazby pro rok 2026).</li>
+          <li>Člověkodny počítám z 250 pracovních dnů v roce.</li>
+        </ul>
+        <p class="src">Sazby odvodů:
+          <a href="https://mzdy.cz/sazby-odvodu" target="_blank" rel="noopener">mzdy.cz</a></p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ SLUŽBY ============ -->
+  <section id="sluzby" data-section="sluzby">
+    <div class="wrap">
+      <h2>Přehled našich služeb</h2>
+
+      <div class="steps">
+
+        <article class="step">
+          <figure class="scene scene-flow">
+  <svg class="flow" viewBox="0 0 300 404" role="img" aria-labelledby="flow-1-nazev">
+    <title id="flow-1-nazev">Průběh náboru v sedmi krocích</title>
+    <line class="flow-line" x1="24" y1="48" x2="24" y2="76"/>
+    <rect class="flow-card" x="48" y="14" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="34" r="13"/>
+    <text class="flow-num" x="24" y="34" dominant-baseline="central">1</text>
+    <text class="flow-text" x="66" y="34" dominant-baseline="central">Zadání pozice</text>
+    <line class="flow-line" x1="24" y1="104" x2="24" y2="132"/>
+    <rect class="flow-card" x="48" y="70" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="90" r="13"/>
+    <text class="flow-num" x="24" y="90" dominant-baseline="central">2</text>
+    <text class="flow-text" x="66" y="90" dominant-baseline="central">Inzerát</text>
+    <line class="flow-line" x1="24" y1="160" x2="24" y2="188"/>
+    <rect class="flow-card" x="48" y="126" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="146" r="13"/>
+    <text class="flow-num" x="24" y="146" dominant-baseline="central">3</text>
+    <text class="flow-text" x="66" y="146" dominant-baseline="central">Filtrace přihlášek</text>
+    <line class="flow-line" x1="24" y1="216" x2="24" y2="244"/>
+    <rect class="flow-card" x="48" y="182" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="202" r="13"/>
+    <text class="flow-num" x="24" y="202" dominant-baseline="central">4</text>
+    <text class="flow-text" x="66" y="202" dominant-baseline="central">Hovory a diagnostika</text>
+    <line class="flow-line" x1="24" y1="272" x2="24" y2="300"/>
+    <rect class="flow-card" x="48" y="238" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="258" r="13"/>
+    <text class="flow-num" x="24" y="258" dominant-baseline="central">5</text>
+    <text class="flow-text" x="66" y="258" dominant-baseline="central">Pohovor u vás</text>
+    <line class="flow-line" x1="24" y1="328" x2="24" y2="356"/>
+    <rect class="flow-card" x="48" y="294" width="240" height="40" rx="10"/>
+    <circle class="flow-badge" cx="24" cy="314" r="13"/>
+    <text class="flow-num" x="24" y="314" dominant-baseline="central">6</text>
+    <text class="flow-text" x="66" y="314" dominant-baseline="central">Vyrozumění všech</text>
+    <rect class="flow-card" x="48" y="350" width="240" height="40" rx="10"/>
+    <circle class="flow-badge flow-badge-cil" cx="24" cy="370" r="13"/>
+    <text class="flow-num flow-num-cil" x="24" y="370" dominant-baseline="central">7</text>
+    <text class="flow-text" x="66" y="370" dominant-baseline="central">Kontakt do nástupu</text>
+  </svg>
+          </figure>
+          <div class="step-body">
+            <span class="step-k">Krok 1</span>
+            <h3>Nábor a výběr</h3>
+            <ul class="bullets">
+              <li>Nezavádíme vám do firmy žádný nový software.</li>
+              <li>Vy nám dáte zadání, my vám přivedeme hotové kandidáty až na pohovor.</li>
+              <li>Rychlý výběr a naše péče předchází tomu, že vám kandidát na poslední chvíli uteče ke konkurenci.</li>
+            </ul>
+            <div class="rozsah" data-rozsah>
+              <div class="rozsah-text" id="rozsah-1">
+                <p>Nábor nových lidí bývá nestandardizovaný, neefektivní a frustrující, zvlášť
+                když vybraný člověk na poslední chvíli nenastoupí. Máme na něj vlastní postup,
+                který spojuje rychlost s pečlivým výběrem. Cílem je dodat vám spolehlivé lidi,
+                kteří do týmu zapadnou a rychle se zapracují.</p>
+
+                <p>Na začátku si s vámi projdeme pozici, kterou potřebujete obsadit, abychom
+                měli všechny potřebné informace pro nábor. Z těchto podkladů připravíme inzerát
+                a podle domluvy ho zveřejníme na pracovních portálech, sociálních sítích
+                a kariérních stránkách vaší firmy. Podklady od uchazečů sbíráme a porovnáváme
+                s dohodnutými kritérii. Ty, kdo požadavky splňují, obratem kontaktujeme
+                a zahájíme s nimi úvodní hovory, případně psychodiagnostické metody vztažené
+                ke konkrétní roli. Ostatním odpovíme a dál je do procesu nepouštíme.</p>
+
+                <p>Po úvodních hovorech domluvíme osobní schůzku podle vašich časových možností
+                a kandidátovi termín průběžně připomínáme. Kandidáta na setkání připravíme
+                a vám předáme podklady, které jsme k němu nasbírali. Na pohovoru se tak můžete
+                věnovat samotné práci a tomu, jak by do role zapadl.</p>
+
+                <p>Po vašem rozhodnutí dáme vědět všem uchazečům, tedy vybranému i těm, kteří
+                přijati nebyli. Odmítnutí vyřizujeme za vás a v takové podobě, aby si vaše firma
+                udržela dobré jméno mezi lidmi, kteří se na vaše pozice budou hlásit
+                i v budoucnu.</p>
+
+                <p>S vybraným kandidátem zůstáváme v kontaktu i v době mezi podpisem smlouvy
+                a nástupem. Právě tehdy se stává, že si to člověk ještě rozmyslí a nakonec
+                nenastoupí. Posíláme mu proto shrnutí všech podstatných podmínek ke smlouvě
+                spolu s nejzazším termínem odpovědi od kandidáta. Pravděpodobnost, že nakonec nepřijde, tím klesá a nemusí se nábor spouštět znovu.</p>
+              </div>
+              <button class="rozsah-btn" type="button" aria-expanded="false" aria-label="Zobrazit celý rozsah" aria-controls="rozsah-1">
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <figure class="scene scene-flow">
+  <svg class="dok" viewBox="0 0 300 581" role="img" aria-labelledby="dok-nazev">
+    <title id="dok-nazev">Z čeho skládáme nástupní dokumentaci</title>
+    <rect class="dok-vstup" x="48" y="6" width="240" height="34" rx="10"/>
+    <text class="dok-vstup-t" x="168" y="23" text-anchor="middle" dominant-baseline="central">Konkrétní pozice u vás</text>
+    <line class="dok-spoj" x1="168" y1="40" x2="168" y2="52"/>
+    <path class="dok-filtr" d="M56 52 H280 L192 90 H144 Z"/>
+    <text class="dok-filtr-t" x="168" y="68" text-anchor="middle" dominant-baseline="central">výběr podle pozice</text>
+    <line class="dok-spoj" x1="168" y1="90" x2="168" y2="102"/>
+    <text class="dok-popisek" x="168" y="112" text-anchor="middle" dominant-baseline="central">z těchto dokumentů skládáme balíček</text>
+    <rect class="dok-karta" x="48" y="126" width="240" height="148" rx="10"/>
+    <text class="dok-nadpis" x="64" y="147" dominant-baseline="central">Základ pro každého</text>
+    <circle class="dok-tecka" cx="66" cy="170" r="2.4"/>
+    <text class="dok-polozka" x="76" y="170" dominant-baseline="central">pracovní smlouva se zkušební dobou</text>
+    <circle class="dok-tecka" cx="66" cy="187" r="2.4"/>
+    <text class="dok-polozka" x="76" y="187" dominant-baseline="central">mzdový výměr</text>
+    <circle class="dok-tecka" cx="66" cy="204" r="2.4"/>
+    <text class="dok-polozka" x="76" y="204" dominant-baseline="central">zákonná informační povinnost</text>
+    <circle class="dok-tecka" cx="66" cy="221" r="2.4"/>
+    <text class="dok-polozka" x="76" y="221" dominant-baseline="central">souhlas se zpracováním údajů</text>
+    <circle class="dok-tecka" cx="66" cy="238" r="2.4"/>
+    <text class="dok-polozka" x="76" y="238" dominant-baseline="central">daňové prohlášení</text>
+    <circle class="dok-tecka" cx="66" cy="255" r="2.4"/>
+    <text class="dok-polozka" x="76" y="255" dominant-baseline="central">záznam o školení BOZP a PO</text>
+    <line class="dok-spoj" x1="168" y1="274" x2="168" y2="288"/>
+    <rect class="dok-karta" x="48" y="288" width="240" height="80" rx="10"/>
+    <text class="dok-nadpis" x="64" y="309" dominant-baseline="central">Výroba a provoz</text>
+    <circle class="dok-tecka" cx="66" cy="332" r="2.4"/>
+    <text class="dok-polozka" x="76" y="332" dominant-baseline="central">dohoda o hmotné odpovědnosti</text>
+    <circle class="dok-tecka" cx="66" cy="349" r="2.4"/>
+    <text class="dok-polozka" x="76" y="349" dominant-baseline="central">předání ochranných pomůcek</text>
+    <line class="dok-spoj" x1="168" y1="368" x2="168" y2="382"/>
+    <rect class="dok-karta" x="48" y="382" width="240" height="97" rx="10"/>
+    <text class="dok-nadpis" x="64" y="403" dominant-baseline="central">Kancelář a vedení</text>
+    <circle class="dok-tecka" cx="66" cy="426" r="2.4"/>
+    <text class="dok-polozka" x="76" y="426" dominant-baseline="central">dohoda o práci na dálku</text>
+    <circle class="dok-tecka" cx="66" cy="443" r="2.4"/>
+    <text class="dok-polozka" x="76" y="443" dominant-baseline="central">dohoda o mlčenlivosti</text>
+    <circle class="dok-tecka" cx="66" cy="460" r="2.4"/>
+    <text class="dok-polozka" x="76" y="460" dominant-baseline="central">předání majetku a přístupů</text>
+    <line class="dok-spoj" x1="168" y1="479" x2="168" y2="493"/>
+    <rect class="dok-karta" x="48" y="493" width="240" height="80" rx="10"/>
+    <text class="dok-nadpis" x="64" y="514" dominant-baseline="central">Volitelně</text>
+    <circle class="dok-tecka" cx="66" cy="537" r="2.4"/>
+    <text class="dok-polozka" x="76" y="537" dominant-baseline="central">srážky ze mzdy</text>
+    <circle class="dok-tecka" cx="66" cy="554" r="2.4"/>
+    <text class="dok-polozka" x="76" y="554" dominant-baseline="central">konkurenční doložka</text>
+  </svg>
+          </figure>
+          <div class="step-body">
+            <span class="step-k">Krok 2</span>
+            <h3>Nástup zaměstnance</h3>
+            <ul class="bullets">
+              <li>Smlouva podle typu spolupráce, zkušební doba, mzdový výměr.</li>
+              <li>Školení BOZP, požární ochrana, ochrana osobních údajů.</li>
+              <li>Účetní dostane kompletní podklady do mzdového systému.</li>
+            </ul>
+            <div class="rozsah" data-rozsah>
+              <div class="rozsah-text" id="rozsah-2">
+                <p>Jakmile si kandidáta vyberete, ozveme se mu telefonicky a hned poté posíláme
+                zprávu se shrnutím podmínek. Tím se snižuje riziko, že si to člověk do nástupu
+                rozmyslí nebo přijme jinou nabídku.</p>
+
+                <p>Ještě před nástupem od zaměstnance vybereme údaje, které bude účetní
+                potřebovat do mzdového systému, a doklady, které k pozici patří, například
+                řidičský nebo potravinářský průkaz. Nástupní dokumentaci pak skládáme
+                individuálně ze společného základu, tedy z pracovní smlouvy se zkušební dobou
+                a mzdového výměru, a z modulů podle typu pozice. U pozic ve výrobě a provozu
+                k tomu přidáváme dohodu o hmotné odpovědnosti, u kancelářských a vedoucích pozic
+                dohodu o mlčenlivosti. Dokumenty se podepisují elektronicky a kopii dostane
+                zaměstnanec rovnou na svůj osobní e-mail.</p>
+
+                <p>Kompletní podklady posíláme mzdové účetní sami, takže je nikdo z vedení
+                nemusí přeposílat. Po podpisu smluv zajistíme úvodní zaškolení do firemních
+                pravidel a proškolení z BOZP a požární ochrany.</p>
+
+                <p>Pro snížení fluktuace se během prvních tří měsíců nového člověka ptáme, jak se
+                začlenil do týmu, a výsledky posíláme jeho vedoucímu. Hlídáme také termíny, na které
+                se ve firmě snadno zapomene, především blížící se konec zkušební doby a pracovní
+                výročí.</p>
+              </div>
+              <button class="rozsah-btn" type="button" aria-expanded="false" aria-label="Zobrazit celý rozsah" aria-controls="rozsah-2">
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <figure class="scene scene-flow">
+  <svg class="dok" viewBox="0 0 300 348" role="img" aria-labelledby="zivot-nazev">
+    <title id="zivot-nazev">Co řešíme od nástupu po odchod zaměstnance</title>
+    <rect class="dok-vstup" x="48" y="6" width="240" height="34" rx="10"/>
+    <text class="dok-vstup-t" x="168" y="23" text-anchor="middle" dominant-baseline="central">Nástup zaměstnance</text>
+    <line class="dok-spoj" x1="168" y1="40" x2="168" y2="52"/>
+    <rect class="dok-karta" x="48" y="52" width="240" height="152" rx="10"/>
+    <text class="dok-nadpis" x="64" y="73" dominant-baseline="central">Průběžně, každý měsíc</text>
+    <circle class="dok-tecka" cx="66" cy="96" r="2.4"/>
+    <text class="dok-polozka" x="76" y="96" dominant-baseline="central">dovolená, ošetřovné, propustky</text>
+    <circle class="dok-tecka" cx="66" cy="113" r="2.4"/>
+    <text class="dok-polozka" x="76" y="113" dominant-baseline="central">dodatky a mzdové výměry</text>
+    <circle class="dok-tecka" cx="66" cy="130" r="2.4"/>
+    <text class="dok-polozka" x="76" y="130" dominant-baseline="central">podklady pro variabilní složku mzdy</text>
+    <circle class="dok-tecka" cx="66" cy="147" r="2.4"/>
+    <text class="dok-polozka" x="76" y="147" dominant-baseline="central">srážky, exekuce a insolvence</text>
+    <circle class="dok-tecka" cx="66" cy="164" r="2.4"/>
+    <text class="dok-polozka" x="76" y="164" dominant-baseline="central">dotazy zaměstnanců</text>
+    <circle class="dok-tecka" cx="66" cy="181" r="2.4"/>
+    <text class="dok-polozka" x="76" y="181" dominant-baseline="central">změny v pracovněprávních předpisech</text>
+    <path class="zivot-smycka" d="M48 188 C 20 188, 20 68, 44 68"/>
+    <path class="zivot-sipka" d="M38 63 L44 68 L38 73"/>
+    <line class="dok-spoj" x1="168" y1="204" x2="168" y2="218"/>
+    <line class="dok-spoj" x1="100" y1="218" x2="232" y2="218"/>
+    <line class="dok-spoj" x1="100" y1="218" x2="100" y2="232"/>
+    <line class="dok-spoj" x1="232" y1="218" x2="232" y2="232"/>
+    <rect class="dok-karta" x="40" y="232" width="120" height="76" rx="10"/>
+    <text class="dok-nadpis" x="54" y="251" dominant-baseline="central">Pokračuje</text>
+    <circle class="dok-tecka" cx="56" cy="270" r="2.2"/>
+    <text class="zivot-polozka" x="65" y="270" dominant-baseline="central">dodatek ke smlouvě</text>
+    <circle class="dok-tecka" cx="56" cy="286" r="2.2"/>
+    <text class="zivot-polozka" x="65" y="286" dominant-baseline="central">prodloužení poměru</text>
+    <rect class="dok-karta" x="172" y="232" width="120" height="108" rx="10"/>
+    <text class="dok-nadpis" x="186" y="251" dominant-baseline="central">Odchází</text>
+    <circle class="dok-tecka" cx="188" cy="270" r="2.2"/>
+    <text class="zivot-polozka" x="197" y="270" dominant-baseline="central">výstupní list</text>
+    <circle class="dok-tecka" cx="188" cy="286" r="2.2"/>
+    <text class="zivot-polozka" x="197" y="286" dominant-baseline="central">zápočtový list</text>
+    <circle class="dok-tecka" cx="188" cy="302" r="2.2"/>
+    <text class="zivot-polozka" x="197" y="302" dominant-baseline="central">odhlášení z úřadů</text>
+    <circle class="dok-tecka" cx="188" cy="318" r="2.2"/>
+    <text class="zivot-polozka" x="197" y="318" dominant-baseline="central">výstupní dotazník</text>
+  </svg>
+          </figure>
+          <div class="step-body">
+            <span class="step-k">Krok 3</span>
+            <h3>Každodenní provoz</h3>
+            <ul class="bullets">
+              <li>Postaráme se o mzdovou uzávěrku.</li>
+              <li>Hlídáme konce zkušebních dob a smluv na dobu určitou.</li>
+              <li>Helpdesk pro zaměstnance, aby vedení mělo čas na práci.</li>
+            </ul>
+            <div class="rozsah" data-rozsah>
+              <div class="rozsah-text" id="rozsah-3">
+                <p>Po nástupu řešíme běžnou personální administrativu, která by jinak končila
+                u vedoucích. Dovolené, ošetřovné a propustky k lékaři se schvalují v jednoduchém
+                online procesu, takže po firmě nekolují papíry. Když se na pracovním poměru něco
+                mění, připravíme k tomu dokumenty. Týká se to dodatků při změně pozice nebo
+                úvazku a nových mzdových výměrů. Zvlášť hlídáme smlouvy na dobu určitou, aby se
+                stihly včas prodloužit nebo převést na dobu neurčitou.</p>
+
+                <p>Dotazy zaměstnanců chodí na nás, ne na jejich nadřízené. Vedoucí tak nemusí
+                přerušovat práci kvůli otázkám, které se opakují.</p>
+
+                <p>Každý měsíc shromažďujeme podklady pro mzdovou uzávěrku a posíláme je účetní ve formě, ve které je potřebuje. Sledujeme také změny v pracovněprávních předpisech a dáváme vám vědět, co z nich pro vaši firmu plyne. Když se mění povinnosti zaměstnavatele, upravíme
+                podle toho vzory dokumentů i vnitřní postupy, abyste na změnu nepřišli až
+                u kontroly.</p>
+
+                <p>Při ukončení spolupráce připravíme dokument, který situaci odpovídá, tedy
+                zrušení ve zkušební době, dohodu o rozvázání pracovního poměru nebo výpověď.
+                Hlídáme, aby byl právně v pořádku a doručený prokazatelným způsobem, protože
+                právě na tom nejčastěji vznikají spory.</p>
+
+                <p>Odchod zaměstnance vedeme podle výstupního listu. Je na něm vypsaný firemní
+                majetek k vrácení i zrušení přístupů do firemních systémů. Finální dokumenty zaměstnanec dostane až ve chvíli, kdy má všechno odevzdané. Vystavíme a předáme zápočtový list i potvrzení pro úřad práce. Účetní dáme včas vědět, aby zaměstnance odhlásila ze správy
+                sociálního zabezpečení a ze zdravotní pojišťovny.</p>
+
+                <p>Odcházejícímu zaměstnanci pak automaticky odejde dotazník. Při odchodu bývají
+                lidé otevřenější než během zaměstnání a ze souhrnu odpovědí se dá vyčíst, proč
+                od vás lidé skutečně odcházejí.</p>
+              </div>
+              <button class="rozsah-btn" type="button" aria-expanded="false" aria-label="Zobrazit celý rozsah" aria-controls="rozsah-3">
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RIZIKA ============ -->
+  <section id="rizika" class="risk" data-section="rizika">
+    <div class="wrap">
+      <svg class="risk-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3.5 1.8 20.5h20.4L12 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12 10v4.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="17.7" r="1.15" fill="currentColor"/>
+      </svg>
+      <h2>Chraňte svou firmu před pokutami z inspektorátu práce</h2>
+      <p class="lede">Většina pochybení nevzniká úmyslem, ale z nedostatku času a rozdrobení mezi několik lidí. Níže jsou příklady, které inspektorát práce řeší nejčastěji.</p>
+
+      <div class="risk-grid">
+
+        <div class="risk-card">
+          <p class="risk-cap">Hrozí pokuta až</p>
+          <p class="risk-amount">400 000 Kč</p>
+          <h3>Za chybějící evidenci pracovní doby</h3>
+          <p>Evidenci musí zaměstnavatel vést u každého zaměstnance. Běžně se vede v sešitě
+             u mistra nebo v tabulce, kterou nikdo měsíčně neuzavírá, a při kontrole se zpětně
+             nedoloží.</p>
+          <p class="src"><a href="https://forum-media.cz/evidence-pracovni-doby-zakonik-prace/" target="_blank" rel="noopener">forum-media.cz</a></p>
+        </div>
+
+        <div class="risk-card">
+          <p class="risk-cap">Hrozí pokuta až</p>
+          <p class="risk-amount">2 000 000 Kč</p>
+          <h3>Za nezajištěné školení BOZP</h3>
+          <p>Podle § 30 zákona č. 251/2005 Sb. Nejčastěji chybí u lidí, kteří nastoupili mimo
+             hlavní nábor, nebo se včas neobnoví, protože termín nikdo nehlídá.</p>
+          <p class="src"><a href="https://www.bozp.cz/aktuality/prestupky-a-spravni-delikty-bozp/" target="_blank" rel="noopener">bozp.cz</a></p>
+        </div>
+
+        <div class="risk-card risk-card--top">
+          <p class="risk-cap">Hrozí pokuta až</p>
+          <p class="risk-amount">10 000 000 Kč</p>
+          <h3>Za nelegální zaměstnávání a švarcsystém</h3>
+          <p>Pro právnické osoby, spodní hranice je 50 000 Kč, k tomu může přijít zákaz činnosti
+             až na dva roky. Vzniká i bez úmyslu, když se spolupráce na živnostenský list
+             postupně promění v běžný pracovní poměr a smlouva se tomu nepřizpůsobí.</p>
+          <p class="src"><a href="https://www.sedlakovalegal.cz/co-odhalily-kontroly-suip-v-roce-2024" target="_blank" rel="noopener">sedlakovalegal.cz</a></p>
+        </div>
+
+      </div>
+
+      <p class="risk-foot">
+        Oblastní inspektoráty práce uložily v roce 2024 celkem <strong>5 595 pokut</strong>
+        v souhrnné výši <strong>468 994 500 Kč</strong>.
+        <a href="https://www.sedlakovalegal.cz/co-odhalily-kontroly-suip-v-roce-2024" target="_blank" rel="noopener">Zdroj</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section id="kontakt" class="contact" data-section="kontakt">
+    <div class="wrap">
+      <h2>Kontaktujte nás</h2>
+      <p class="lede">Pokud vás zajímají další informace, jsme tu pro vás. Budeme vás kontaktovat, co nejdříve.</p>
+      <div class="contact-grid">
+        <aside class="contact-card">
+          <p class="contact-name">Zavolejte nám</p>
+          <p>
+            <a class="contact-line" href="tel:+420602749385">
+              <svg class="ikona-tel" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.4 3.5h3.1l1.6 4-2 1.4a12 12 0 0 0 6 6l1.4-2 4 1.6v3.1a1.9 1.9 0 0 1-2.1 1.9C11.6 20.4 3.6 12.4 4.5 5.6A1.9 1.9 0 0 1 6.4 3.5z"
+                      fill="none" stroke="currentColor" stroke-width="1.7"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              +420 602 749 385
+            </a>
+          </p>
+        </aside>
+
+        <form id="lead" class="form-card" novalidate>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel"
+                   autocomplete="tel" placeholder="+420 777 123 456" required>
+            <p class="err" data-err="phone" hidden>Zadejte české číslo o devíti číslicích.</p>
+          </div>
+
+          <div class="pole-par">
+            <div class="field">
+              <label for="email">E-mail <span class="opt"></span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="jmeno@firma.cz">
+            </div>
+
+            <div class="field">
+              <label for="company">Firma <span class="opt"></span></label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="zprava">Jak vám můžeme pomoci? <span class="opt"></span></label>
+            <textarea id="zprava" name="zprava" rows="4"></textarea>
+          </div>
+
+          <fieldset class="field slot">
+            <legend>Preferovaný čas schůzky <span class="opt"></span></legend>
+            <div class="slot-row">
+              <input id="date" name="date" type="date" aria-label="Datum schůzky">
+              <select id="cas" name="cas" aria-label="Hodina schůzky">
+                <option value="">vyberte hodinu</option>
+                <option>8:00</option><option>8:30</option>
+                <option>9:00</option><option>9:30</option>
+                <option>10:00</option><option>10:30</option>
+                <option>11:00</option><option>11:30</option>
+                <option>12:00</option><option>12:30</option>
+                <option>13:00</option><option>13:30</option>
+                <option>14:00</option><option>14:30</option>
+                <option>15:00</option><option>15:30</option>
+                <option>16:00</option><option>16:30</option>
+                <option>17:00</option><option>17:30</option>
+                <option>18:00</option><option>18:30</option>
+                <option>19:00</option>
+              </select>
+            </div>
+            <p class="hint">Termín potvrdíme ručně, jakmile se ozveme.</p>
+          </fieldset>
+
+          <button class="btn btn-primary" type="submit">ODESLAT</button>
+          <p class="form-status" data-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
