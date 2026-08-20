@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Outsourcing HR administrativy</title>
-<meta name="description" content="Outsourcing HR administrativy">
+<title>Outsourcing HR operativy</title>
+<meta name="description" content="Outsourcing HR operativy">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Outsourcing HR administrativy">
+<meta property="og:title" content="Outsourcing HR operativy">
 <meta property="og:description" content="Konec dohadování s lidmi a zbytečných nákladů.">
 <meta property="og:image" content="https://huzva-coder.github.io/capra-web/assets/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -53,8 +53,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="copy">
-      <h1>Chcete se zbavit dohadování,<br>zbytečných nákladů a&nbsp;papírování?</h1>
-      <p class="sub">Outsourcing náborů, nástupů a personální administrativy za zlomek ceny HR specialisty.</p>
+      <h1>Chcete méně HR starostí, nákladů a operativy?</h1>
+      <p class="sub">Převezmeme nábory, nástupy a personální administrativu pro firmy s 30–100 zaměstnanci za zlomek ceny vlastního HR.</p>
       <a class="btn btn-primary" href="#kontakt">Ano, jsem připraven</a>
     </div>
     <div class="hero-people">
@@ -96,7 +96,7 @@
 
           <div class="slider">
             <output class="slider-bubble" for="pocet" data-out="pocet">1</output>
-            <input type="range" id="pocet" min="1" max="30" value="5" step="1">
+            <input type="range" id="pocet" min="1" max="30" value="6" step="1">
             <div class="slider-scale"><span>1</span><span>30</span></div>
           </div>
 
@@ -110,12 +110,25 @@
         </div>
 
         <div class="calc-output">
-          <p class="calc-label">Ročně vás to stojí</p>
+          <p class="calc-label">Měsíčně vás to stojí</p>
           <p class="calc-money"><span class="num num-money" data-out="kc">0</span>&nbsp;Kč</p>
           <p class="calc-days">
-            <strong class="num num-4" data-out="dny">0</strong> člověkodnů ročně,
+            <strong class="num num-4" data-out="dny">0</strong> člověkodnů měsíčně,
             které nešly do byznysu.
           </p>
+
+          <div class="calc-nabidka" data-nabidka>
+            <p class="calc-nabidka-label">S námi zaplatíte</p>
+            <p class="calc-nabidka-cena">
+              <span class="num num-cena" data-out="cenaOd">0</span>
+              <span class="calc-nabidka-pomlcka">–</span>
+              <span class="num num-cena" data-out="cenaDo">0</span>&nbsp;Kč
+              <span class="calc-nabidka-jed">měsíčně</span>
+            </p>
+            <p class="calc-nabidka-individualne">Při vaší velikosti připravíme nabídku na míru.</p>
+            <p class="calc-nabidka-pozn">Rozpětí se odvíjí od velikosti vaší firmy
+              a od toho, kolik lidí ročně přijímáte.</p>
+          </div>
         </div>
       </div>
 
@@ -128,7 +141,7 @@
           <div class="param-radek">
             <span class="param-role">Ředitel</span>
             <label>hrubá mzda
-              <input type="number" id="mzda-reditel" value="150000" min="0" step="1000" inputmode="numeric">
+              <input type="number" id="mzda-reditel" value="110000" min="0" step="1000" inputmode="numeric">
               <span class="param-jed">Kč</span>
             </label>
             <label>čas na HR
@@ -139,11 +152,21 @@
           <div class="param-radek">
             <span class="param-role">Manažer či mistr</span>
             <label>hrubá mzda
-              <input type="number" id="mzda-manazer" value="80000" min="0" step="1000" inputmode="numeric">
+              <input type="number" id="mzda-manazer" value="60000" min="0" step="1000" inputmode="numeric">
               <span class="param-jed">Kč</span>
             </label>
             <label>čas na HR
               <input type="number" id="podil-manazer" value="20" min="0" max="100" step="1" inputmode="numeric">
+              <span class="param-jed">%</span>
+            </label>
+          </div>
+          <div class="param-radek">
+            <span class="param-role">Vaše firma</span>
+            <label>zaměstnanců na vedoucího
+              <input type="number" id="lidi-na-vedouciho" value="10" min="1" max="40" step="0.5" inputmode="decimal">
+            </label>
+            <label>ročně přijmete
+              <input type="number" id="podil-nabor" value="22" min="0" max="100" step="1" inputmode="numeric">
               <span class="param-jed">%</span>
             </label>
           </div>
@@ -152,7 +175,7 @@
         <ul>
           <li>K hrubé mzdě připočítávám odvody zaměstnavatele <strong>33,8 %</strong>
               (24,8 % sociální + 9 % zdravotní pojištění, sazby pro rok 2026).</li>
-          <li>Člověkodny počítám z 250 pracovních dnů v roce.</li>
+          <li>Člověkodny počítám z 250 pracovních dnů v roce, tedy zhruba 21 za měsíc.</li>
         </ul>
         <p class="src">Sazby odvodů:
           <a href="https://mzdy.cz/sazby-odvodu" target="_blank" rel="noopener">mzdy.cz</a></p>
