@@ -29,20 +29,6 @@
 
   var ODVODY = 1.338;          // 24,8 % sociální + 9 % zdravotní, sazby 2026
   var DNU_V_MESICI = 250 / 12;   // 250 pracovních dnů v roce
-
-  // ceník: základ podle velikosti firmy + variabilní složka za nábory.
-  // Na stránce se ukazuje jen výsledné rozpětí, ne způsob výpočtu.
-  var PASMA = [
-    { do: 20, zaklad: 5000 },
-    { do: 30, zaklad: 6500 },
-    { do: 40, zaklad: 8000 },
-    { do: 60, zaklad: 9500 },
-    { do: 80, zaklad: 11500 },
-    { do: 110, zaklad: 14000 }
-  ];
-  var SAZBA_NABOR = 250;       // Kč měsíčně za každý nábor ročně
-  var ROZPTYL = 0.10;          // rozpětí kolem spočtené ceny
-  var KROK_ZAOKROUHLENI = 500;
   var UVODNI_CIL = 6;          // po najetí na sekci sem posuvník dojede
   var UVODNI_START = 30;       // a jede z opačného konce
   var ROZJEZD_MS = 2000;
@@ -57,30 +43,13 @@
   function sazby() {
     return {
       reditel: { mzda: param('mzda-reditel', 110000), podil: param('podil-reditel', 10, 100) },
-      manazer: { mzda: param('mzda-manazer', 60000), podil: param('podil-manazer', 20, 100) },
-      naVedouciho: param('lidi-na-vedouciho', 10),
-      naborPodil: param('podil-nabor', 22, 100)
-    };
-  }
-
-  function nabidka(zamestnancu, naboru) {
-    var pasmo = null;
-    for (var i = 0; i < PASMA.length; i++) {
-      if (zamestnancu <= PASMA[i].do) { pasmo = PASMA[i]; break; }
-    }
-    if (!pasmo) return null;                 // nad největší pásmo se cena stanoví individuálně
-    var cena = pasmo.zaklad + naboru * SAZBA_NABOR;
-    var k = KROK_ZAOKROUHLENI;
-    return {
-      od: Math.floor(cena * (1 - ROZPTYL) / k) * k,
-      doo: Math.ceil(cena * (1 + ROZPTYL) / k) * k
+      manazer: { mzda: param('mzda-manazer', 60000), podil: param('podil-manazer', 20, 100) }
     };
   }
 
   var slider = document.getElementById('pocet');
   var sliderWrap = slider && slider.closest('.slider');
   var calcBox = document.querySelector('[data-calc]');
-  var nabidkaBox = document.querySelector('[data-nabidka]');
 
   var out = {};
   Array.prototype.forEach.call(document.querySelectorAll('[data-out]'), function (el) {
@@ -96,11 +65,8 @@
     var manazeru = Math.max(0, pocet - 1);
     var reditel = s.reditel.mzda * ODVODY * s.reditel.podil;
     var manazeri = manazeru * s.manazer.mzda * ODVODY * s.manazer.podil;
-    var zamestnancu = Math.max(pocet, Math.round(pocet * s.naVedouciho));
     return {
       manazeru: manazeru,
-      zamestnancu: zamestnancu,
-      naboru: Math.round(zamestnancu * s.naborPodil),
       kc: Math.round(reditel + manazeri),
       dny: Math.round((s.reditel.podil + manazeru * s.manazer.podil) * DNU_V_MESICI)
     };
@@ -129,12 +95,6 @@
     napis('slovoLide', sklon(pocet, 'člověk', 'lidé', 'lidí'));
     napis('slovoManazer', sklon(v.manazeru,
       'manažer či mistr', 'manažeři či mistři', 'manažerů či mistrů'));
-    napis('zamestnancu', v.zamestnancu);
-
-    var n = nabidka(v.zamestnancu, v.naboru);
-    if (nabidkaBox) nabidkaBox.classList.toggle('je-individualni', !n);
-    napis('cenaOd', n ? formatKc(n.od) : '');
-    napis('cenaDo', n ? formatKc(n.doo) : '');
   }
 
   function rozjed(cil) {
@@ -165,7 +125,7 @@
     });
 
     Array.prototype.forEach.call(
-      document.querySelectorAll('#mzda-reditel, #podil-reditel, #mzda-manazer, #podil-manazer, #lidi-na-vedouciho, #podil-nabor'),
+      document.querySelectorAll('#mzda-reditel, #podil-reditel, #mzda-manazer, #podil-manazer'),
       function (el) {
         el.addEventListener('input', function () {
           prepocitej();
