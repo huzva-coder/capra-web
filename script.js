@@ -28,7 +28,7 @@
   /* ---------------- kalkulačka ---------------- */
 
   var ODVODY = 1.338;          // 24,8 % sociální + 9 % zdravotní, sazby 2026
-  var DNU_V_MESICI = 250 / 12;   // 250 pracovních dnů v roce
+  var DNU_V_ROCE = 250;
   var UVODNI_CIL = 6;          // po najetí na sekci sem posuvník dojede
   var UVODNI_START = 30;       // a jede z opačného konce
   var ROZJEZD_MS = 2000;
@@ -63,12 +63,12 @@
   function rocniNaklad(pocet) {
     var s = sazby();
     var manazeru = Math.max(0, pocet - 1);
-    var reditel = s.reditel.mzda * ODVODY * s.reditel.podil;
-    var manazeri = manazeru * s.manazer.mzda * ODVODY * s.manazer.podil;
+    var reditel = s.reditel.mzda * ODVODY * s.reditel.podil * 12;
+    var manazeri = manazeru * s.manazer.mzda * ODVODY * s.manazer.podil * 12;
     return {
       manazeru: manazeru,
       kc: Math.round(reditel + manazeri),
-      dny: Math.round((s.reditel.podil + manazeru * s.manazer.podil) * DNU_V_MESICI)
+      dny: Math.round((s.reditel.podil + manazeru * s.manazer.podil) * DNU_V_ROCE)
     };
   }
 

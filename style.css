@@ -225,6 +225,25 @@ summary::-webkit-details-marker { display: none; }
   max-width: 42ch; margin: 0 auto 1.75rem;
 }
 
+/* ================= problém ================= */
+.problem { background: #fff; padding-top: clamp(2rem, 3.2vw, 2.6rem); }
+.problem-layout { display: grid; gap: 2rem; align-items: center; max-width: 58rem; margin-inline: auto; }
+.problem-grid { display: grid; gap: 1.5rem; }
+.problem-card { position: relative; padding-left: 1.5rem; }
+.problem-card::before {
+  content: ""; position: absolute; left: 0; top: .5rem;
+  width: 11px; height: 11px; background: var(--accent); border-radius: 3px;
+}
+.problem-card h3 {
+  margin: 0 0 .25rem; font-size: 1.05rem;
+  letter-spacing: -.01em; line-height: 1.3;
+}
+.problem-card p { margin: 0; color: var(--text); font-size: .95rem; }
+
+/* ilustrace má průhledné pozadí, žlutá linka ji váže ke sloupci vlevo */
+.problem-media { position: relative; }
+.problem-media img { width: 100%; }
+
 /* ================= kalkulačka ================= */
 .calc {
   position: relative; overflow: hidden;
@@ -612,6 +631,12 @@ input[aria-invalid="true"] { border-color: #b3402f; }
     display: block; margin-top: .45rem;
     font-size: .78rem; line-height: 1.45; color: var(--text);
   }
+  .problem-layout { grid-template-columns: 1fr .8fr; gap: 3rem; }
+  .problem-media { padding-left: 1.75rem; }
+  .problem-media::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px; background: var(--accent); border-radius: 2px;
+  }
   .calc { grid-template-columns: 1.05fr .95fr; gap: 2.5rem; align-items: center; }
   .calc-output { padding: 2rem 1.5rem; }
   .param-radek { grid-template-columns: 1fr auto auto; }
@@ -681,6 +706,8 @@ input[aria-invalid="true"] { border-color: #b3402f; }
   .calc-note { margin-top: 1.25rem; }
   .risk-foot { margin-top: 1.5rem; }
   .step .scene { display: none; }
+  /* ilustrace u problému na mobilu jen doplňuje, ať sekce není zbytečně dlouhá */
+  .problem-media { max-width: 20rem; margin-inline: auto; }
   .risk-card:not(.risk-card--top) { display: none; }
 
   /* kontakt se má vejít na jednu obrazovku, ať se kvůli odeslání nescrolluje */
